@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Index</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="echarts-5.0.2/echarts-5.0.2/dist/echarts.min.js"></script>
+</head>
+
+<body>
+
+  <main class="container">
+    <div class="box a">Comp 3512 Assign #1<div class="tooltip">Credits<span class="tooltiptext">Authors: Sebastian
+          Wimmer, Matthew Passarelli </br>
+          COMP 3512 </br> Tooltip CSS from: https://www.w3schools.com/css/css_tooltip.asp </br> Font Styling from: </br> https://fonts.googleapis.com/css2?family=DM+Sans&display=swap
+    </br> Charts derived from: https://echarts.apache.org/en/index.html </br>
+
+        </span></div>
+    </div>
+    <div class="box b">
+      <section>
+        <h2>List of Companies</h2>
+        <form class=stockB>
+          <fieldset>Filter:
+            <input id="searchbar" type="text" class="search" placeholder="Search:" list="filterList">
+            <datalist id="filterList">
+            </datalist>
+          </fieldset>
+          <input type="button" value="Go" id="go">
+          <input type="reset" value="Clear" id="clear">
+        </form>
+        <ul id="companyList"></ul>
+      </section>
+    </div>
+    <div class="box c">
+      <section>
+        <h2>Company Information</h2>
+        <h2 id="stockLogo"></h2>
+        <label>Symbol:</label>
+        <span id="stockSymbol"></span>
+        <label>Name:</label>
+        <span id="stockName"></span>
+        <label>Sector:</label>
+        <span id="stockSector"></span>
+        <label>Sub-Industry:</label>
+        <span id="stockSubIndustry"></span>
+        <label>Address:</label>
+        <span id="stockAddress"></span>
+        <label>Website:</label>
+        <span><a href="" id="stockWebsite"></a></span>
+        <label>Exchange:</label>
+        <span id="stockExchange"></span>
+        <label>Description:</label>
+        <span id="stockDescription"></span>
+      </section>
+    </div>
+    <div class="box d" id="map"></div>
+    <div class="box e">
+      <h2>Stock Data</h2>
+      <div id="loader3" class="lds-ring"></div>
+      <div id="viewBtn">
+        <button id="showCharts">View Charts</button>
+      </div>
+      <table id="stockTable" style="width: 530px;">
+        <tr>
+          <th>Date</th>
+          <th>Open</th>
+          <th>Close</th>
+          <th>Low</th>
+          <th>High</th>
+          <th>Volume</th>
+        </tr>
+
+      </table>
+    </div>
+    <div class="box f">
+      <table id="extraStockInfo">
+        <tr id="Average">
+          <th>Average</th>
+
+        </tr>
+        <tr id="stockMin">
+          <th>Min</th>
+
+        </tr>
+        <tr id="stockMax">
+          <th>Max</th>
+
+        </tr>
+      </table>
+    </div>
+    <div id="box g" class="box g" style="width:1200px; height:400px;">
+      <h2>Charts</h2>
+    </div>
+
+    <div class="box h" style="width:500px">
+      <h2 id="compNameInfo"></h2>
+      <button id="closeButton">Close</button>
+      <button id="speakButton">Speak</button>
+      <p id="compDescription"></p>
+    </div>
+
+    <div class="box i" style="width:500px;">
+      <h2>Financials</h2>
+      <table id="financeTable" style="width: 99%">
+        <tr>
+          <th>Date</th>
+          <th>Revenues</th>
+          <th>Earnings</th>
+          <th>Assets</th>
+          <th>Liabilities</th>
+        </tr>
+
+      </table>
+    </div>
+
+    <div id="box j" class="box j" style="width:600px; height:400px;">
+      <h2>Charts CANDLE</h2>
+    </div>
+
+    <div id="box k" class="box k" style="width:590px; height:400px;">
+      <h2>Line Chart!</h2>
+    </div>
+
+  </main>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJacsQISIKUeqkA50BORhcGm4MpeHI8N8&callback=initMap"
+    async defer></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
